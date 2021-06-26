@@ -23,8 +23,11 @@ class ResponseWrapper: Mappable {
 }
 
 class Error: Mappable {
+    
+    var error = ""
+    
     func mapping(map: Map) {
-        
+        error <- map["error_msg"]
     }
     
     required init?(map: Map) {

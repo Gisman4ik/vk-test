@@ -12,8 +12,8 @@ final class AuthorizationManager: NSObject, VKSdkDelegate,VKSdkUIDelegate {
     
     private var appId = "7889000"
     private let vkSDK: VKSdk
-//    var token: VKAccessToken?
-    var token = "832b980b816ab6d60297f8c7366ebca260b84d0c8963fad74df5fa5da4ddf63bab0fa88644b56c3ff1108"
+    var realm = RealmManager.shared
+    var token: String?
     let versionAPI = "5.131"
     static let shared = AuthorizationManager()
     private var keyWindow: UIWindow? { UIApplication.shared.windows.first(where: { $0.isKeyWindow }) ?? UIApplication.shared.windows.first
@@ -31,10 +31,10 @@ final class AuthorizationManager: NSObject, VKSdkDelegate,VKSdkUIDelegate {
         VKSdk.wakeUpSession(scope) { [self] state, error in
             switch state {
             case .initialized:
-                print("initialized")
                 VKSdk.authorize(scope)
             case .authorized:
-                print("authorized")
+                guard let token = realm.readToken() else {return}
+                self.token = token
                 guard let feedVK = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(describing: FeedVK.self)) as? FeedVK else {return}
                 keyWindow?.rootViewController = feedVK
             default:
@@ -45,7 +45,11 @@ final class AuthorizationManager: NSObject, VKSdkDelegate,VKSdkUIDelegate {
     
     func vkSdkAccessAuthorizationFinished(with result: VKAuthorizationResult!) {
         if result.token != nil {
-//            token = result.token
+            let prevToken = realm.readToken()
+            if prevToken == nil {
+                let token = RealmTokenSaver(token: result.token.accessToken)
+                realm.saveToken(token: token)
+            }
         } else if result.error != nil {
             print(result?.error ?? "error")
         }

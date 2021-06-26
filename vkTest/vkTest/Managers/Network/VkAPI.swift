@@ -43,8 +43,7 @@ extension NetworkService: TargetType {
     var parameters: [String: Any]? {
         var params = [String: Any]()
         let version = AuthorizationManager.shared.versionAPI
-        let token = AuthorizationManager.shared.token
-//        guard let token = AuthorizationManager.shared.token?.accessToken else {return nil}
+        guard let token = AuthorizationManager.shared.token else {return nil}
         switch self {
         case .getNewsFeed:
             params["lang"] = "ru"

@@ -18,7 +18,19 @@
 		9E6167D526875818001FBD77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E6167D326875818001FBD77 /* Main.storyboard */; };
 		9E6167D726875819001FBD77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E6167D626875819001FBD77 /* Assets.xcassets */; };
 		9E6167DA26875819001FBD77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E6167D826875819001FBD77 /* LaunchScreen.storyboard */; };
+		9E8B0D4E2687BFE700504C8F /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8B0D4D2687BFE700504C8F /* RealmManager.swift */; };
+		9E8B0D502687C11300504C8F /* RealmTokenSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8B0D4F2687C11300504C8F /* RealmTokenSaver.swift */; };
+		9E8B0D532687CC0A00504C8F /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8B0D522687CC0A00504C8F /* UITableView+Extensions.swift */; };
 		9EDBAC3A26876085004E78F4 /* AuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDBAC3926876085004E78F4 /* AuthorizationManager.swift */; };
+		9EDF490D2687B4F400DDEE90 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDF490C2687B4F400DDEE90 /* DataManager.swift */; };
+		9EDF49142687B98500DDEE90 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDF49122687B98500DDEE90 /* HeaderCell.swift */; };
+		9EDF49152687B98500DDEE90 /* HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDF49132687B98500DDEE90 /* HeaderCell.xib */; };
+		9EDF49182687B99A00DDEE90 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDF49162687B99A00DDEE90 /* TextCell.swift */; };
+		9EDF49192687B99A00DDEE90 /* TextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDF49172687B99A00DDEE90 /* TextCell.xib */; };
+		9EDF491C2687B9AB00DDEE90 /* MediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDF491A2687B9AB00DDEE90 /* MediaCell.swift */; };
+		9EDF491D2687B9AB00DDEE90 /* MediaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDF491B2687B9AB00DDEE90 /* MediaCell.xib */; };
+		9EDF49202687B9BC00DDEE90 /* FooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDF491E2687B9BC00DDEE90 /* FooterCell.swift */; };
+		9EDF49212687B9BC00DDEE90 /* FooterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDF491F2687B9BC00DDEE90 /* FooterCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +48,19 @@
 		9E6167D626875819001FBD77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E6167D926875819001FBD77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E6167DB26875819001FBD77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E8B0D4D2687BFE700504C8F /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		9E8B0D4F2687C11300504C8F /* RealmTokenSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmTokenSaver.swift; sourceTree = "<group>"; };
+		9E8B0D522687CC0A00504C8F /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		9EDBAC3926876085004E78F4 /* AuthorizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationManager.swift; sourceTree = "<group>"; };
+		9EDF490C2687B4F400DDEE90 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		9EDF49122687B98500DDEE90 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
+		9EDF49132687B98500DDEE90 /* HeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCell.xib; sourceTree = "<group>"; };
+		9EDF49162687B99A00DDEE90 /* TextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
+		9EDF49172687B99A00DDEE90 /* TextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextCell.xib; sourceTree = "<group>"; };
+		9EDF491A2687B9AB00DDEE90 /* MediaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCell.swift; sourceTree = "<group>"; };
+		9EDF491B2687B9AB00DDEE90 /* MediaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaCell.xib; sourceTree = "<group>"; };
+		9EDF491E2687B9BC00DDEE90 /* FooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterCell.swift; sourceTree = "<group>"; };
+		9EDF491F2687B9BC00DDEE90 /* FooterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FooterCell.xib; sourceTree = "<group>"; };
 		D0E48B57DECD59ADF0E96788 /* Pods-vkTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vkTest.debug.xcconfig"; path = "Target Support Files/Pods-vkTest/Pods-vkTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,6 +88,7 @@
 		9E221C9C26877D1D0075F8D1 /* FeedVK */ = {
 			isa = PBXGroup;
 			children = (
+				9EDF490B2687B40700DDEE90 /* Cells */,
 				9E221C9E26877D4F0075F8D1 /* FeedVK.swift */,
 			);
 			path = FeedVK;
@@ -86,12 +111,13 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		9E221CA5268792890075F8D1 /* Data */ = {
+		9E221CA5268792890075F8D1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				9E221CA6268792980075F8D1 /* NewsFeedModel.swift */,
+				9E8B0D4F2687C11300504C8F /* RealmTokenSaver.swift */,
 			);
-			path = Data;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		9E6167C126875818001FBD77 = {
@@ -115,7 +141,8 @@
 		9E6167CC26875818001FBD77 /* vkTest */ = {
 			isa = PBXGroup;
 			children = (
-				9E221CA5268792890075F8D1 /* Data */,
+				9E8B0D512687CBF600504C8F /* Extensions */,
+				9E221CA5268792890075F8D1 /* Models */,
 				9EDBAC3B268765F4004E78F4 /* ViewControllers */,
 				9EDBAC3826876058004E78F4 /* Managers */,
 				9E6167CD26875818001FBD77 /* AppDelegate.swift */,
@@ -128,11 +155,21 @@
 			path = vkTest;
 			sourceTree = "<group>";
 		};
+		9E8B0D512687CBF600504C8F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9E8B0D522687CC0A00504C8F /* UITableView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		9EDBAC3826876058004E78F4 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
 				9E221CA2268786FD0075F8D1 /* Network */,
 				9EDBAC3926876085004E78F4 /* AuthorizationManager.swift */,
+				9EDF490C2687B4F400DDEE90 /* DataManager.swift */,
+				9E8B0D4D2687BFE700504C8F /* RealmManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -144,6 +181,53 @@
 				9E221C9C26877D1D0075F8D1 /* FeedVK */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9EDF490B2687B40700DDEE90 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9EDF49112687B95F00DDEE90 /* FooterCell */,
+				9EDF49102687B95900DDEE90 /* MediaCell */,
+				9EDF490F2687B94F00DDEE90 /* TextCell */,
+				9EDF490E2687B94100DDEE90 /* HeaderCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		9EDF490E2687B94100DDEE90 /* HeaderCell */ = {
+			isa = PBXGroup;
+			children = (
+				9EDF49122687B98500DDEE90 /* HeaderCell.swift */,
+				9EDF49132687B98500DDEE90 /* HeaderCell.xib */,
+			);
+			path = HeaderCell;
+			sourceTree = "<group>";
+		};
+		9EDF490F2687B94F00DDEE90 /* TextCell */ = {
+			isa = PBXGroup;
+			children = (
+				9EDF49162687B99A00DDEE90 /* TextCell.swift */,
+				9EDF49172687B99A00DDEE90 /* TextCell.xib */,
+			);
+			path = TextCell;
+			sourceTree = "<group>";
+		};
+		9EDF49102687B95900DDEE90 /* MediaCell */ = {
+			isa = PBXGroup;
+			children = (
+				9EDF491A2687B9AB00DDEE90 /* MediaCell.swift */,
+				9EDF491B2687B9AB00DDEE90 /* MediaCell.xib */,
+			);
+			path = MediaCell;
+			sourceTree = "<group>";
+		};
+		9EDF49112687B95F00DDEE90 /* FooterCell */ = {
+			isa = PBXGroup;
+			children = (
+				9EDF491E2687B9BC00DDEE90 /* FooterCell.swift */,
+				9EDF491F2687B9BC00DDEE90 /* FooterCell.xib */,
+			);
+			path = FooterCell;
 			sourceTree = "<group>";
 		};
 		E6FD42ED3D653C41C363AB36 /* Frameworks */ = {
@@ -213,7 +297,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EDF49152687B98500DDEE90 /* HeaderCell.xib in Resources */,
 				9E6167DA26875819001FBD77 /* LaunchScreen.storyboard in Resources */,
+				9EDF491D2687B9AB00DDEE90 /* MediaCell.xib in Resources */,
+				9EDF49212687B9BC00DDEE90 /* FooterCell.xib in Resources */,
+				9EDF49192687B99A00DDEE90 /* TextCell.xib in Resources */,
 				9E6167D726875819001FBD77 /* Assets.xcassets in Resources */,
 				9E6167D526875818001FBD77 /* Main.storyboard in Resources */,
 			);
@@ -271,11 +359,19 @@
 				9E221CA7268792980075F8D1 /* NewsFeedModel.swift in Sources */,
 				9E221CA1268786710075F8D1 /* NetworkManager.swift in Sources */,
 				9E6167D226875818001FBD77 /* Authenticator.swift in Sources */,
+				9E8B0D532687CC0A00504C8F /* UITableView+Extensions.swift in Sources */,
 				9EDBAC3A26876085004E78F4 /* AuthorizationManager.swift in Sources */,
 				9E221C9F26877D4F0075F8D1 /* FeedVK.swift in Sources */,
+				9E8B0D4E2687BFE700504C8F /* RealmManager.swift in Sources */,
 				9E221CA4268787160075F8D1 /* VkAPI.swift in Sources */,
+				9EDF49202687B9BC00DDEE90 /* FooterCell.swift in Sources */,
+				9EDF49142687B98500DDEE90 /* HeaderCell.swift in Sources */,
 				9E6167CE26875818001FBD77 /* AppDelegate.swift in Sources */,
+				9E8B0D502687C11300504C8F /* RealmTokenSaver.swift in Sources */,
+				9EDF490D2687B4F400DDEE90 /* DataManager.swift in Sources */,
 				9E6167D026875818001FBD77 /* SceneDelegate.swift in Sources */,
+				9EDF491C2687B9AB00DDEE90 /* MediaCell.swift in Sources */,
+				9EDF49182687B99A00DDEE90 /* TextCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
