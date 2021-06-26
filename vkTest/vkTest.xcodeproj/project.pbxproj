@@ -3,30 +3,40 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		793F6809C56B4AADFFDB93B9 /* Pods_vkTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4777D7B7DAFF15E690EF8AFD /* Pods_vkTest.framework */; };
+		9E221C9F26877D4F0075F8D1 /* FeedVK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E221C9E26877D4F0075F8D1 /* FeedVK.swift */; };
+		9E221CA1268786710075F8D1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E221CA0268786710075F8D1 /* NetworkManager.swift */; };
+		9E221CA4268787160075F8D1 /* VkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E221CA3268787160075F8D1 /* VkAPI.swift */; };
+		9E221CA7268792980075F8D1 /* NewsFeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E221CA6268792980075F8D1 /* NewsFeedModel.swift */; };
 		9E6167CE26875818001FBD77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6167CD26875818001FBD77 /* AppDelegate.swift */; };
 		9E6167D026875818001FBD77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6167CF26875818001FBD77 /* SceneDelegate.swift */; };
-		9E6167D226875818001FBD77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6167D126875818001FBD77 /* ViewController.swift */; };
+		9E6167D226875818001FBD77 /* Authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6167D126875818001FBD77 /* Authenticator.swift */; };
 		9E6167D526875818001FBD77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E6167D326875818001FBD77 /* Main.storyboard */; };
 		9E6167D726875819001FBD77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E6167D626875819001FBD77 /* Assets.xcassets */; };
 		9E6167DA26875819001FBD77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E6167D826875819001FBD77 /* LaunchScreen.storyboard */; };
+		9EDBAC3A26876085004E78F4 /* AuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDBAC3926876085004E78F4 /* AuthorizationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4777D7B7DAFF15E690EF8AFD /* Pods_vkTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_vkTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C13A6B14910DD8601BDEB16 /* Pods-vkTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vkTest.release.xcconfig"; path = "Target Support Files/Pods-vkTest/Pods-vkTest.release.xcconfig"; sourceTree = "<group>"; };
+		9E221C9E26877D4F0075F8D1 /* FeedVK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVK.swift; sourceTree = "<group>"; };
+		9E221CA0268786710075F8D1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		9E221CA3268787160075F8D1 /* VkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VkAPI.swift; sourceTree = "<group>"; };
+		9E221CA6268792980075F8D1 /* NewsFeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedModel.swift; sourceTree = "<group>"; };
 		9E6167CA26875818001FBD77 /* vkTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vkTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E6167CD26875818001FBD77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E6167CF26875818001FBD77 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9E6167D126875818001FBD77 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9E6167D126875818001FBD77 /* Authenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authenticator.swift; sourceTree = "<group>"; };
 		9E6167D426875818001FBD77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E6167D626875819001FBD77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E6167D926875819001FBD77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E6167DB26875819001FBD77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EDBAC3926876085004E78F4 /* AuthorizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationManager.swift; sourceTree = "<group>"; };
 		D0E48B57DECD59ADF0E96788 /* Pods-vkTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vkTest.debug.xcconfig"; path = "Target Support Files/Pods-vkTest/Pods-vkTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,8 +58,40 @@
 				D0E48B57DECD59ADF0E96788 /* Pods-vkTest.debug.xcconfig */,
 				4C13A6B14910DD8601BDEB16 /* Pods-vkTest.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9E221C9C26877D1D0075F8D1 /* FeedVK */ = {
+			isa = PBXGroup;
+			children = (
+				9E221C9E26877D4F0075F8D1 /* FeedVK.swift */,
+			);
+			path = FeedVK;
+			sourceTree = "<group>";
+		};
+		9E221C9D26877D320075F8D1 /* Authenticator */ = {
+			isa = PBXGroup;
+			children = (
+				9E6167D126875818001FBD77 /* Authenticator.swift */,
+			);
+			path = Authenticator;
+			sourceTree = "<group>";
+		};
+		9E221CA2268786FD0075F8D1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9E221CA0268786710075F8D1 /* NetworkManager.swift */,
+				9E221CA3268787160075F8D1 /* VkAPI.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		9E221CA5268792890075F8D1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				9E221CA6268792980075F8D1 /* NewsFeedModel.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		9E6167C126875818001FBD77 = {
@@ -73,15 +115,35 @@
 		9E6167CC26875818001FBD77 /* vkTest */ = {
 			isa = PBXGroup;
 			children = (
+				9E221CA5268792890075F8D1 /* Data */,
+				9EDBAC3B268765F4004E78F4 /* ViewControllers */,
+				9EDBAC3826876058004E78F4 /* Managers */,
 				9E6167CD26875818001FBD77 /* AppDelegate.swift */,
 				9E6167CF26875818001FBD77 /* SceneDelegate.swift */,
-				9E6167D126875818001FBD77 /* ViewController.swift */,
 				9E6167D326875818001FBD77 /* Main.storyboard */,
 				9E6167D626875819001FBD77 /* Assets.xcassets */,
 				9E6167D826875819001FBD77 /* LaunchScreen.storyboard */,
 				9E6167DB26875819001FBD77 /* Info.plist */,
 			);
 			path = vkTest;
+			sourceTree = "<group>";
+		};
+		9EDBAC3826876058004E78F4 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				9E221CA2268786FD0075F8D1 /* Network */,
+				9EDBAC3926876085004E78F4 /* AuthorizationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		9EDBAC3B268765F4004E78F4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9E221C9D26877D320075F8D1 /* Authenticator */,
+				9E221C9C26877D1D0075F8D1 /* FeedVK */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		E6FD42ED3D653C41C363AB36 /* Frameworks */ = {
@@ -206,7 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E6167D226875818001FBD77 /* ViewController.swift in Sources */,
+				9E221CA7268792980075F8D1 /* NewsFeedModel.swift in Sources */,
+				9E221CA1268786710075F8D1 /* NetworkManager.swift in Sources */,
+				9E6167D226875818001FBD77 /* Authenticator.swift in Sources */,
+				9EDBAC3A26876085004E78F4 /* AuthorizationManager.swift in Sources */,
+				9E221C9F26877D4F0075F8D1 /* FeedVK.swift in Sources */,
+				9E221CA4268787160075F8D1 /* VkAPI.swift in Sources */,
 				9E6167CE26875818001FBD77 /* AppDelegate.swift in Sources */,
 				9E6167D026875818001FBD77 /* SceneDelegate.swift in Sources */,
 			);
