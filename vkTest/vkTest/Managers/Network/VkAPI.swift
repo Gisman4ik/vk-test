@@ -11,6 +11,7 @@ import Alamofire
 
 enum NetworkService {
     case getNewsFeed
+    case getProfileInfo
 }
 
 extension NetworkService: TargetType {
@@ -22,12 +23,14 @@ extension NetworkService: TargetType {
         switch self {
         case .getNewsFeed:
             return "newsfeed.get"
+        case .getProfileInfo:
+            return "account.getProfileInfo"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .getNewsFeed:
+        case .getNewsFeed, .getProfileInfo:
             return .get
         }
     }
@@ -44,13 +47,16 @@ extension NetworkService: TargetType {
         var params = [String: Any]()
         let version = AuthorizationManager.shared.versionAPI
         guard let token = AuthorizationManager.shared.token else {return nil}
+        
+        params["lang"] = "ru"
+        params["access_token"] = token
+        params["v"] = version
+        
         switch self {
         case .getNewsFeed:
-            params["lang"] = "ru"
-            params["access_token"] = token
-            params["v"] = version
-//        default:
-//            return nil
+            params["filters"] = "post"
+        default:
+            return params
         }
         return params
     }

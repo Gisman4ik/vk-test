@@ -18,6 +18,9 @@ class Authenticator: UIViewController {
 
     @IBAction func signInVK(_ sender: Any) {
         authManager.wakeUpSession()
+        
+        let keyWindow = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) ?? UIApplication.shared.windows.first
+        keyWindow?.rootViewController = MainTabBar()
     }
     
 }

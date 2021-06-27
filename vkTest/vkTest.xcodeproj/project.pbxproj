@@ -12,6 +12,11 @@
 		9E221CA1268786710075F8D1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E221CA0268786710075F8D1 /* NetworkManager.swift */; };
 		9E221CA4268787160075F8D1 /* VkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E221CA3268787160075F8D1 /* VkAPI.swift */; };
 		9E221CA7268792980075F8D1 /* NewsFeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E221CA6268792980075F8D1 /* NewsFeedModel.swift */; };
+		9E3F961D268888C900B02E20 /* PhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3F961C268888C900B02E20 /* PhotoView.xib */; };
+		9E3F961F2688A86200B02E20 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3F961E2688A86200B02E20 /* PhotoView.swift */; };
+		9E3F96222689026F00B02E20 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3F96212689026F00B02E20 /* MainTabBar.swift */; };
+		9E3F96252689089600B02E20 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3F96242689089600B02E20 /* ProfileVC.swift */; };
+		9E3F962726891C2800B02E20 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3F962626891C2800B02E20 /* ProfileModel.swift */; };
 		9E6167CE26875818001FBD77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6167CD26875818001FBD77 /* AppDelegate.swift */; };
 		9E6167D026875818001FBD77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6167CF26875818001FBD77 /* SceneDelegate.swift */; };
 		9E6167D226875818001FBD77 /* Authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6167D126875818001FBD77 /* Authenticator.swift */; };
@@ -40,6 +45,11 @@
 		9E221CA0268786710075F8D1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		9E221CA3268787160075F8D1 /* VkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VkAPI.swift; sourceTree = "<group>"; };
 		9E221CA6268792980075F8D1 /* NewsFeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedModel.swift; sourceTree = "<group>"; };
+		9E3F961C268888C900B02E20 /* PhotoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoView.xib; sourceTree = "<group>"; };
+		9E3F961E2688A86200B02E20 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
+		9E3F96212689026F00B02E20 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
+		9E3F96242689089600B02E20 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		9E3F962626891C2800B02E20 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		9E6167CA26875818001FBD77 /* vkTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vkTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E6167CD26875818001FBD77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E6167CF26875818001FBD77 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,8 +126,34 @@
 			children = (
 				9E221CA6268792980075F8D1 /* NewsFeedModel.swift */,
 				9E8B0D4F2687C11300504C8F /* RealmTokenSaver.swift */,
+				9E3F962626891C2800B02E20 /* ProfileModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		9E3F961B2688889A00B02E20 /* ContentViews */ = {
+			isa = PBXGroup;
+			children = (
+				9E3F961C268888C900B02E20 /* PhotoView.xib */,
+				9E3F961E2688A86200B02E20 /* PhotoView.swift */,
+			);
+			path = ContentViews;
+			sourceTree = "<group>";
+		};
+		9E3F96202689025200B02E20 /* MainTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				9E3F96212689026F00B02E20 /* MainTabBar.swift */,
+			);
+			path = MainTabBar;
+			sourceTree = "<group>";
+		};
+		9E3F96232689087E00B02E20 /* ProfileVC */ = {
+			isa = PBXGroup;
+			children = (
+				9E3F96242689089600B02E20 /* ProfileVC.swift */,
+			);
+			path = ProfileVC;
 			sourceTree = "<group>";
 		};
 		9E6167C126875818001FBD77 = {
@@ -177,6 +213,8 @@
 		9EDBAC3B268765F4004E78F4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				9E3F96232689087E00B02E20 /* ProfileVC */,
+				9E3F96202689025200B02E20 /* MainTabBar */,
 				9E221C9D26877D320075F8D1 /* Authenticator */,
 				9E221C9C26877D1D0075F8D1 /* FeedVK */,
 			);
@@ -215,6 +253,7 @@
 		9EDF49102687B95900DDEE90 /* MediaCell */ = {
 			isa = PBXGroup;
 			children = (
+				9E3F961B2688889A00B02E20 /* ContentViews */,
 				9EDF491A2687B9AB00DDEE90 /* MediaCell.swift */,
 				9EDF491B2687B9AB00DDEE90 /* MediaCell.xib */,
 			);
@@ -300,6 +339,7 @@
 				9EDF49152687B98500DDEE90 /* HeaderCell.xib in Resources */,
 				9E6167DA26875819001FBD77 /* LaunchScreen.storyboard in Resources */,
 				9EDF491D2687B9AB00DDEE90 /* MediaCell.xib in Resources */,
+				9E3F961D268888C900B02E20 /* PhotoView.xib in Resources */,
 				9EDF49212687B9BC00DDEE90 /* FooterCell.xib in Resources */,
 				9EDF49192687B99A00DDEE90 /* TextCell.xib in Resources */,
 				9E6167D726875819001FBD77 /* Assets.xcassets in Resources */,
@@ -356,9 +396,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E3F96222689026F00B02E20 /* MainTabBar.swift in Sources */,
 				9E221CA7268792980075F8D1 /* NewsFeedModel.swift in Sources */,
 				9E221CA1268786710075F8D1 /* NetworkManager.swift in Sources */,
+				9E3F96252689089600B02E20 /* ProfileVC.swift in Sources */,
 				9E6167D226875818001FBD77 /* Authenticator.swift in Sources */,
+				9E3F961F2688A86200B02E20 /* PhotoView.swift in Sources */,
 				9E8B0D532687CC0A00504C8F /* UITableView+Extensions.swift in Sources */,
 				9EDBAC3A26876085004E78F4 /* AuthorizationManager.swift in Sources */,
 				9E221C9F26877D4F0075F8D1 /* FeedVK.swift in Sources */,
@@ -368,6 +411,7 @@
 				9EDF49142687B98500DDEE90 /* HeaderCell.swift in Sources */,
 				9E6167CE26875818001FBD77 /* AppDelegate.swift in Sources */,
 				9E8B0D502687C11300504C8F /* RealmTokenSaver.swift in Sources */,
+				9E3F962726891C2800B02E20 /* ProfileModel.swift in Sources */,
 				9EDF490D2687B4F400DDEE90 /* DataManager.swift in Sources */,
 				9E6167D026875818001FBD77 /* SceneDelegate.swift in Sources */,
 				9EDF491C2687B9AB00DDEE90 /* MediaCell.swift in Sources */,

@@ -27,16 +27,13 @@ final class AuthorizationManager: NSObject, VKSdkDelegate,VKSdkUIDelegate {
     }
     
     func wakeUpSession() {
-        let scope = ["photos","wall","friends"]
+        let scope = ["wall", "friends", "groups","audio"]
         VKSdk.wakeUpSession(scope) { [self] state, error in
             switch state {
             case .initialized:
                 VKSdk.authorize(scope)
             case .authorized:
-                guard let token = realm.readToken() else {return}
-                self.token = token
-                guard let feedVK = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(describing: FeedVK.self)) as? FeedVK else {return}
-                keyWindow?.rootViewController = feedVK
+                didAuthorize()
             default:
                 print(error?.localizedDescription ?? "error")
             }
@@ -46,13 +43,22 @@ final class AuthorizationManager: NSObject, VKSdkDelegate,VKSdkUIDelegate {
     func vkSdkAccessAuthorizationFinished(with result: VKAuthorizationResult!) {
         if result.token != nil {
             let prevToken = realm.readToken()
+            let token = RealmTokenSaver(token: result.token.accessToken)
             if prevToken == nil {
-                let token = RealmTokenSaver(token: result.token.accessToken)
                 realm.saveToken(token: token)
+            } else {
+                realm.updateToken(token: token)
             }
+            didAuthorize()
         } else if result.error != nil {
             print(result?.error ?? "error")
         }
+    }
+    
+    func didAuthorize() {
+        guard let token = realm.readToken() else {return}
+        self.token = token
+        keyWindow?.rootViewController = MainTabBar()
     }
     
     func vkSdkUserAuthorizationFailed() {

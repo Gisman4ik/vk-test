@@ -26,4 +26,11 @@ final class RealmManager {
             return token
         }
     }
+    
+    func updateToken(token: RealmTokenSaver) {
+        try! realm.write {
+            realm.delete(realm.objects(RealmTokenSaver.self))
+        }
+        saveToken(token: token)
+    }
 }

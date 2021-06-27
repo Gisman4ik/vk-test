@@ -17,11 +17,26 @@ final class NetworkManager {
     private init() {}
     
     
-    func getNewsFeed(completion: @escaping (ResponseWrapper) -> Void, failure: @escaping (String) -> Void) {
+    func getNewsFeed(completion: @escaping (ResponseFeedWrapper) -> Void, failure: @escaping (String) -> Void) {
         provider.request(.getNewsFeed) { (result) in
             switch result {
             case let .success(response):
-                guard let responseWrapper = try? response.mapObject(ResponseWrapper.self) else {
+                guard let responseWrapper = try? response.mapObject(ResponseFeedWrapper.self) else {
+                    failure("Unknown")
+                    return
+                }
+                completion(responseWrapper)
+            case let .failure(error):
+                failure(error.errorDescription ?? "Unknown")
+            }
+        }
+    }
+    
+    func getProfileInfo(completion: @escaping (ResponseProfileWrapper) -> Void, failure: @escaping (String) -> Void) {
+        provider.request(.getProfileInfo) { (result) in
+            switch result {
+            case let .success(response):
+                guard let responseWrapper = try? response.mapObject(ResponseProfileWrapper.self) else {
                     failure("Unknown")
                     return
                 }

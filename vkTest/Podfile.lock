@@ -1,5 +1,11 @@
 PODS:
   - Alamofire (5.4.3)
+  - ImageSlideshow (1.9.2):
+    - ImageSlideshow/Core (= 1.9.2)
+  - ImageSlideshow/Core (1.9.2)
+  - ImageSlideshow/SDWebImage (1.9.2):
+    - ImageSlideshow/Core
+    - SDWebImage (>= 3.7)
   - Moya (14.0.0):
     - Moya/Core (= 14.0.0)
   - Moya-ObjectMapper (2.9):
@@ -21,6 +27,8 @@ PODS:
   - VK-ios-sdk (1.6.2)
 
 DEPENDENCIES:
+  - ImageSlideshow
+  - ImageSlideshow/SDWebImage
   - Moya
   - Moya-ObjectMapper
   - RealmSwift
@@ -30,6 +38,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - ImageSlideshow
     - Moya
     - Moya-ObjectMapper
     - ObjectMapper
@@ -40,6 +49,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  ImageSlideshow: be305b54eaf2b2cfc7a7141c7c734605d44dc07d
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   Moya-ObjectMapper: 967a99d9ea3aa9c93ddbe112aeca3667f53bfe93
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
@@ -48,6 +58,6 @@ SPEC CHECKSUMS:
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
   VK-ios-sdk: 5bcf00a2014a7323f98db9328b603d4f96635caa
 
-PODFILE CHECKSUM: 9d3ea555635af53b29dd873974fc0752ab2f17e8
+PODFILE CHECKSUM: d81d3fde61b35263e5cb4288e8986f00c457b571
 
 COCOAPODS: 1.10.1

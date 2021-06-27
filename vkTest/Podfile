@@ -10,5 +10,7 @@ target 'vkTest' do
   pod 'Moya'
   pod 'Moya-ObjectMapper'
   pod 'SDWebImage'
+  pod 'ImageSlideshow'
+  pod "ImageSlideshow/SDWebImage"
 
 end
