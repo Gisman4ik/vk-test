@@ -12,14 +12,17 @@ class PhotoView: UIView {
 
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var slideshow: ImageSlideshow!
+    var fullscreenResponder: UIViewController?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
     }
     
-    convenience init (frame: CGRect, imagesURLs: [String]) {
+    convenience init (frame: CGRect, imagesURLs: [String], fullscreenResponder: UIViewController?) {
         self.init(frame: frame)
+        self.fullscreenResponder = fullscreenResponder
+        setGestureFullSlideShow()
         var sdWebImageSource: [SDWebImageSource] = []
         for urlString in imagesURLs {
             let source = SDWebImageSource(urlString: urlString)
@@ -43,4 +46,15 @@ class PhotoView: UIView {
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     }
+    
+    func setGestureFullSlideShow() {
+         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTap))
+         slideshow.addGestureRecognizer(gestureRecognizer)
+     }
+     
+     @objc func didTap() {
+        guard let vc = fullscreenResponder else {return}
+        let fullScreenController = slideshow.presentFullScreenController(from: vc)
+         fullScreenController.slideshow.activityIndicator = DefaultActivityIndicator()
+     }
 }

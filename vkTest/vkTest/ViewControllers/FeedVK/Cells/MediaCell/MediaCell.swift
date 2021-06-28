@@ -15,6 +15,7 @@ class MediaCell: UITableViewCell {
     @IBOutlet weak var lineViewHeight: NSLayoutConstraint!
     
     var photoView: PhotoView?
+    var fullscreenResponder: UIViewController?
     var media: [Attachment]? {
         didSet {
             setMediaContent()
@@ -41,7 +42,7 @@ class MediaCell: UITableViewCell {
             let aspectRatio = Double(imgMaxHeight!.height) / Double(imgMaxHeight!.width)
             let width = UIScreen.main.bounds.width
             mainViewHeight.constant = width *  CGFloat(aspectRatio)
-            photoView = PhotoView.init(frame: mainView.bounds, imagesURLs: photosURLs)
+            photoView = PhotoView.init(frame: mainView.bounds, imagesURLs: photosURLs, fullscreenResponder: fullscreenResponder)
             guard let sPhotoView = photoView else {return}
             mainView.addSubview(sPhotoView)
             sPhotoView.translatesAutoresizingMaskIntoConstraints = false

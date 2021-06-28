@@ -10,26 +10,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="MainInfoCell" customModule="vkTest" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="336" height="119"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="131" id="KGk-i7-Jjw" customClass="MainInfoCell" customModule="vkTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="336" height="131"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="336" height="119"/>
+                <rect key="frame" x="0.0" y="0.0" width="336" height="131"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flypikaIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Dzz-Qk-aYj">
-                        <rect key="frame" x="10" y="10" width="100" height="100"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="100" id="k9t-fA-pNw"/>
-                            <constraint firstAttribute="height" constant="100" id="l5H-f4-PiN"/>
-                        </constraints>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                <integer key="value" value="50"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Zdg-De-56U">
                         <rect key="frame" x="120" y="25.5" width="206" height="69"/>
                         <subviews>
@@ -53,28 +40,40 @@
                             </label>
                         </subviews>
                     </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RjV-jx-UzB" customClass="ImageSlideshow" customModule="ImageSlideshow">
+                        <rect key="frame" x="10" y="10" width="100" height="100"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="bYK-n1-jLO"/>
+                            <constraint firstAttribute="height" constant="100" id="wCQ-qa-TQd"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <integer key="value" value="50"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Zdg-De-56U" firstAttribute="centerY" secondItem="Dzz-Qk-aYj" secondAttribute="centerY" id="Agv-Mn-AMM"/>
-                    <constraint firstItem="Zdg-De-56U" firstAttribute="leading" secondItem="Dzz-Qk-aYj" secondAttribute="trailing" constant="10" id="CvE-rh-taR"/>
-                    <constraint firstItem="Dzz-Qk-aYj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Rtj-aW-LGo"/>
+                    <constraint firstItem="RjV-jx-UzB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="4H4-RO-85i"/>
+                    <constraint firstAttribute="bottom" secondItem="RjV-jx-UzB" secondAttribute="bottom" constant="10" id="JyD-v7-Ioa"/>
+                    <constraint firstItem="Zdg-De-56U" firstAttribute="centerY" secondItem="RjV-jx-UzB" secondAttribute="centerY" id="TuY-GE-dzK"/>
+                    <constraint firstItem="RjV-jx-UzB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="hbl-3y-db3"/>
                     <constraint firstAttribute="trailing" secondItem="Zdg-De-56U" secondAttribute="trailing" constant="10" id="k6f-Ai-HuP"/>
-                    <constraint firstItem="Dzz-Qk-aYj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="pm7-y3-ZSg"/>
-                    <constraint firstAttribute="bottom" secondItem="Dzz-Qk-aYj" secondAttribute="bottom" constant="10" id="s9l-ow-ecK"/>
+                    <constraint firstItem="Zdg-De-56U" firstAttribute="leading" secondItem="RjV-jx-UzB" secondAttribute="trailing" constant="10" id="m3O-kl-Kjb"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="onlineStatus" destination="KJC-k4-nmi" id="2at-E8-xuV"/>
                 <outlet property="profileName" destination="sr5-18-5P5" id="Xh9-S5-zPe"/>
-                <outlet property="profilePhoto" destination="Dzz-Qk-aYj" id="jlN-4I-aTJ"/>
                 <outlet property="profileStatus" destination="BoX-CC-Kuf" id="qs2-ki-Y9i"/>
+                <outlet property="slideshow" destination="RjV-jx-UzB" id="HiZ-Y7-gjk"/>
             </connections>
-            <point key="canvasLocation" x="4.3478260869565224" y="70.647321428571431"/>
+            <point key="canvasLocation" x="4.3478260869565224" y="74.665178571428569"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="flypikaIcon" width="535" height="395"/>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

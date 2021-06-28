@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ImageSlideshow
 
 enum ProfileViewModel: CaseIterable {
     case mainInfo
@@ -24,7 +25,7 @@ class ProfileVC: UIViewController {
     var userFriends: FriendsModel?
     var tableModel = ProfileViewModel.allCases
     var profileID: Int?
-
+    var slideshow: ImageSlideshow?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +62,7 @@ extension ProfileVC: UITableViewDataSource {
         case .mainInfo:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: MainInfoCell.self), for: indexPath)
             guard let mainInfoCell = cell as? MainInfoCell else {return cell}
+            mainInfoCell.fullscreenDelegate = self
             mainInfoCell.profile = profile
             return mainInfoCell
         case .additionalInfo:
@@ -79,5 +81,25 @@ extension ProfileVC: UITableViewDataSource {
             }
             return friendsCell
         }
+    }
+}
+
+extension ProfileVC: ImageFullScreen {
+    
+    func setGestureFullSlideShow() {
+         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.didTap))
+         guard let slideShow = slideshow else {return}
+         slideShow.addGestureRecognizer(gestureRecognizer)
+     }
+     
+     @objc func didTap() {
+         guard let slideShow = slideshow else {return}
+        let fullScreenController = slideShow.presentFullScreenController(from: self)
+         fullScreenController.slideshow.activityIndicator = DefaultActivityIndicator()
+     }
+    
+    func openFullScreen(_ slideshow: ImageSlideshow) {
+        self.slideshow = slideshow
+        self.setGestureFullSlideShow()
     }
 }

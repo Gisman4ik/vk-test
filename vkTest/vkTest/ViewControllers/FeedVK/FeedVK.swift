@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ImageSlideshow
 
 enum FeedViewModel: CaseIterable {
     case header
@@ -95,6 +96,7 @@ extension FeedVK: UITableViewDataSource {
         case .media :
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: MediaCell.self), for: indexPath)
             guard let mediaCell = cell as? MediaCell else {return cell}
+            mediaCell.fullscreenResponder = self
             mediaCell.media = post?.attachments
             return mediaCell
         case .footer :
