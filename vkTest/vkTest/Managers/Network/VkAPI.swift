@@ -11,7 +11,8 @@ import Alamofire
 
 enum NetworkService {
     case getNewsFeed
-    case getProfileInfo
+    case getProfilePhoto
+    case getUserInfo
 }
 
 extension NetworkService: TargetType {
@@ -23,24 +24,18 @@ extension NetworkService: TargetType {
         switch self {
         case .getNewsFeed:
             return "newsfeed.get"
-        case .getProfileInfo:
-            return "account.getProfileInfo"
+        case .getUserInfo:
+            return "users.get"
+        case .getProfilePhoto:
+            return "photos.get"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .getNewsFeed, .getProfileInfo:
+        default:
             return .get
         }
-    }
-    
-    var sampleData: Data {
-        return Data()
-    }
-    
-    var headers: [String : String]? {
-        return nil
     }
     
     var parameters: [String: Any]? {
@@ -55,8 +50,12 @@ extension NetworkService: TargetType {
         switch self {
         case .getNewsFeed:
             params["filters"] = "post"
-        default:
-            return params
+        case .getProfilePhoto:
+            params["album_id"] = "profile"
+        case .getUserInfo:
+            params["fields"] = "photo_max_orig, online, domain, site, education, status, last_seen, followers_count, occupation, relation, sex, bdate, city, country, home_town, screen_name"
+//        default:
+//            return params
         }
         return params
     }
@@ -74,5 +73,12 @@ extension NetworkService: TargetType {
             return .requestParameters(parameters: params, encoding: parameterEncoding)
         }
     }
+    
+    var sampleData: Data {
+        return Data()
+    }
+    
+    var headers: [String : String]? {
+        return nil
+    }
 }
-

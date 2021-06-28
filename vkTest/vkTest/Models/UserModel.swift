@@ -1,16 +1,16 @@
 //
-//  ProfileModel.swift
+//  UserModel.swift
 //  vkTest
 //
-//  Created by Artur Radziukhin on 27.06.21.
+//  Created by Artur Radziukhin on 28.06.21.
 //
 
 import Foundation
 import ObjectMapper
 
-class ResponseProfileWrapper: Mappable {
+class ResponseUserWrapper: Mappable {
     
-    var response: ProfileModel?
+    var response: [UserModel]?
     var error: Error?
     required init?(map: Map) {
         mapping(map: map)
@@ -22,7 +22,7 @@ class ResponseProfileWrapper: Mappable {
     }
 }
 
-class ProfileModel: Mappable {
+class UserModel: Mappable {
     
     var firstName = ""
     var id = 0
@@ -30,13 +30,16 @@ class ProfileModel: Mappable {
     var homeTown = ""
     var status = ""
     var bdate = ""
-    var bdateVisibility = 0
     var city: City?
     var country: Country?
     var phone = ""
     var relation = 0
     var screenName = ""
     var sex = 0
+    var occupation: Occupation?
+    var online = 0
+    var photoMaxOrig = ""
+    var followersCount = 0
     
     required init?(map: Map) {
         mapping(map: map)
@@ -49,13 +52,16 @@ class ProfileModel: Mappable {
         homeTown        <- map["home_town"]
         status          <- map["status"]
         bdate           <- map["bdate"]
-        bdateVisibility <- map["bdate_visibility"]
         city            <- map["city"]
         country         <- map["country"]
         phone           <- map["phone"]
         relation        <- map["relation"]
         screenName      <- map["screen_name"]
         sex             <- map["sex"]
+        occupation      <- map["occupation"]
+        online          <- map["online"]
+        photoMaxOrig    <- map["photo_max_orig"]
+        followersCount  <- map["followers_count"]
     }
 }
 
@@ -86,5 +92,20 @@ class Country: Mappable {
     func mapping(map: Map) {
         id      <- map["id"]
         title   <- map["title"]
+    }
+}
+
+class Occupation: Mappable {
+    
+    var name = ""
+    var type = ""
+    
+    required init?(map: Map) {
+        mapping(map: map)
+    }
+    
+    func mapping(map: Map) {
+        name <- map["name"]
+        type <- map["type"]
     }
 }

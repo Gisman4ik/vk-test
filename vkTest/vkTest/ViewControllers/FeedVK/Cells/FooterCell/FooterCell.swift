@@ -28,8 +28,8 @@ class FooterCell: UITableViewCell {
     func reloadCell() {
         guard let post = post else {return}
         likesButton.setTitle("\(post.likes?.count ?? 0)", for: .normal)
-        commentsButton.setTitle("\(post.likes?.count ?? 0)", for: .normal)
-        repostsButton.setTitle("\(post.likes?.count ?? 0)", for: .normal)
+        commentsButton.setTitle("\(post.comments?.count ?? 0)", for: .normal)
+        repostsButton.setTitle("\(post.reposts?.count ?? 0)", for: .normal)
         if let views = post.views?.count {
             var viewStr = String(views)
             if views > 1000 {viewStr = String(format: "%.1f", Double(views) / 1000.0) + "K"}

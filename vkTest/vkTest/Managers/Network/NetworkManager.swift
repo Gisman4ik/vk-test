@@ -32,11 +32,26 @@ final class NetworkManager {
         }
     }
     
-    func getProfileInfo(completion: @escaping (ResponseProfileWrapper) -> Void, failure: @escaping (String) -> Void) {
-        provider.request(.getProfileInfo) { (result) in
+    func getUserInfo(completion: @escaping (ResponseUserWrapper) -> Void, failure: @escaping (String) -> Void) {
+        provider.request(.getUserInfo) { (result) in
             switch result {
             case let .success(response):
-                guard let responseWrapper = try? response.mapObject(ResponseProfileWrapper.self) else {
+                guard let responseWrapper = try? response.mapObject(ResponseUserWrapper.self) else {
+                    failure("Unknown")
+                    return
+                }
+                completion(responseWrapper)
+            case let .failure(error):
+                failure(error.errorDescription ?? "Unknown")
+            }
+        }
+    }
+    
+   func getProfilePhoto(completion: @escaping (ResponseUserPhotoWrapper) -> Void, failure: @escaping (String) -> Void) {
+        provider.request(.getProfilePhoto) { (result) in
+            switch result {
+            case let .success(response):
+                guard let responseWrapper = try? response.mapObject(ResponseUserPhotoWrapper.self) else {
                     failure("Unknown")
                     return
                 }

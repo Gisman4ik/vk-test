@@ -27,7 +27,7 @@ final class AuthorizationManager: NSObject, VKSdkDelegate,VKSdkUIDelegate {
     }
     
     func wakeUpSession() {
-        let scope = ["wall", "friends", "groups","audio"]
+        let scope = ["wall", "friends", "groups"]
         VKSdk.wakeUpSession(scope) { [self] state, error in
             switch state {
             case .initialized:
