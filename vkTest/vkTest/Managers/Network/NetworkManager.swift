@@ -32,8 +32,8 @@ final class NetworkManager {
         }
     }
     
-    func getUserInfo(completion: @escaping (ResponseUserWrapper) -> Void, failure: @escaping (String) -> Void) {
-        provider.request(.getUserInfo) { (result) in
+    func getUserInfo(id: Int?, completion: @escaping (ResponseUserWrapper) -> Void, failure: @escaping (String) -> Void) {
+        provider.request(.getUserInfo(id: id)) { (result) in
             switch result {
             case let .success(response):
                 guard let responseWrapper = try? response.mapObject(ResponseUserWrapper.self) else {
@@ -52,6 +52,21 @@ final class NetworkManager {
             switch result {
             case let .success(response):
                 guard let responseWrapper = try? response.mapObject(ResponseUserPhotoWrapper.self) else {
+                    failure("Unknown")
+                    return
+                }
+                completion(responseWrapper)
+            case let .failure(error):
+                failure(error.errorDescription ?? "Unknown")
+            }
+        }
+    }
+    
+    func getUserFriends(id: Int?, completion: @escaping (ResponseFriendsWrapper) -> Void, failure: @escaping (String) -> Void) {
+        provider.request(.getUserFriends(id: id)) { (result) in
+            switch result {
+            case let .success(response):
+                guard let responseWrapper = try? response.mapObject(ResponseFriendsWrapper.self) else {
                     failure("Unknown")
                     return
                 }

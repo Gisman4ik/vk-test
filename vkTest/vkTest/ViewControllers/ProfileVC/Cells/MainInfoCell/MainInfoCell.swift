@@ -28,14 +28,23 @@ class MainInfoCell: UITableViewCell {
     
     func setProfileInfo() {
         guard let profile = profile else {return}
-        profilePhoto.sd_setImage(with: URL(string: profile.photoMaxOrig), completed: nil)
+        
+        profilePhoto.sd_setImage(with: URL(string: profile.photoMax), completed: nil)
+        
         profileName.text = profile.firstName + " " + profile.lastName
+        
         if !profile.status.isEmpty {
             profileStatus.text = profile.status
             profileStatus.textColor = .black
         } else {
             profileStatus.text = "Установить статус"
             profileStatus.textColor = .systemBlue
+        }
+        
+        if profile.online == 1 {
+            onlineStatus.text = "online"
+        } else {
+            onlineStatus.text = "offline"
         }
     }
 }

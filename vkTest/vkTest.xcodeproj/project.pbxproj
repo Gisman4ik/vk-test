@@ -33,6 +33,10 @@
 		9EC155AC2689E82C007E430D /* AdditionalInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC155AA2689E82C007E430D /* AdditionalInfoCell.swift */; };
 		9EC155AD2689E82C007E430D /* AdditionalInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EC155AB2689E82C007E430D /* AdditionalInfoCell.xib */; };
 		9EC155AF2689EE2F007E430D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC155AE2689EE2F007E430D /* UserModel.swift */; };
+		9EC155B2268A03C5007E430D /* FriendsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC155B1268A03C5007E430D /* FriendsModel.swift */; };
+		9EC155B6268A0892007E430D /* FriendCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC155B4268A0892007E430D /* FriendCollectionCell.swift */; };
+		9EC155B7268A0892007E430D /* FriendCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EC155B5268A0892007E430D /* FriendCollectionCell.xib */; };
+		9EC155B9268A0D07007E430D /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC155B8268A0D07007E430D /* UICollectionView+Extensions.swift */; };
 		9EDBAC3A26876085004E78F4 /* AuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDBAC3926876085004E78F4 /* AuthorizationManager.swift */; };
 		9EDF490D2687B4F400DDEE90 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDF490C2687B4F400DDEE90 /* DataManager.swift */; };
 		9EDF49142687B98500DDEE90 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDF49122687B98500DDEE90 /* HeaderCell.swift */; };
@@ -75,6 +79,10 @@
 		9EC155AA2689E82C007E430D /* AdditionalInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalInfoCell.swift; sourceTree = "<group>"; };
 		9EC155AB2689E82C007E430D /* AdditionalInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdditionalInfoCell.xib; sourceTree = "<group>"; };
 		9EC155AE2689EE2F007E430D /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		9EC155B1268A03C5007E430D /* FriendsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsModel.swift; sourceTree = "<group>"; };
+		9EC155B4268A0892007E430D /* FriendCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCollectionCell.swift; sourceTree = "<group>"; };
+		9EC155B5268A0892007E430D /* FriendCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendCollectionCell.xib; sourceTree = "<group>"; };
+		9EC155B8268A0D07007E430D /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
 		9EDBAC3926876085004E78F4 /* AuthorizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationManager.swift; sourceTree = "<group>"; };
 		9EDF490C2687B4F400DDEE90 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		9EDF49122687B98500DDEE90 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
@@ -142,6 +150,7 @@
 				9E8B0D4F2687C11300504C8F /* RealmTokenSaver.swift */,
 				9E89CFD02689E0010028AD30 /* UserPhotos.swift */,
 				9EC155AE2689EE2F007E430D /* UserModel.swift */,
+				9EC155B1268A03C5007E430D /* FriendsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -238,6 +247,7 @@
 		9E89CFC32689D0940028AD30 /* FriendsCell */ = {
 			isa = PBXGroup;
 			children = (
+				9EC155B3268A0864007E430D /* FriendCollectionCell */,
 				9E89CFCC2689D0CD0028AD30 /* FriendsCell.swift */,
 				9E89CFCD2689D0CD0028AD30 /* FriendsCell.xib */,
 			);
@@ -248,8 +258,18 @@
 			isa = PBXGroup;
 			children = (
 				9E8B0D522687CC0A00504C8F /* UITableView+Extensions.swift */,
+				9EC155B8268A0D07007E430D /* UICollectionView+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9EC155B3268A0864007E430D /* FriendCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				9EC155B4268A0892007E430D /* FriendCollectionCell.swift */,
+				9EC155B5268A0892007E430D /* FriendCollectionCell.xib */,
+			);
+			path = FriendCollectionCell;
 			sourceTree = "<group>";
 		};
 		9EDBAC3826876058004E78F4 /* Managers */ = {
@@ -394,6 +414,7 @@
 				9EDF491D2687B9AB00DDEE90 /* MediaCell.xib in Resources */,
 				9E3F961D268888C900B02E20 /* PhotoView.xib in Resources */,
 				9EDF49212687B9BC00DDEE90 /* FooterCell.xib in Resources */,
+				9EC155B7268A0892007E430D /* FriendCollectionCell.xib in Resources */,
 				9E89CFCF2689D0CD0028AD30 /* FriendsCell.xib in Resources */,
 				9EC155AD2689E82C007E430D /* AdditionalInfoCell.xib in Resources */,
 				9EDF49192687B99A00DDEE90 /* TextCell.xib in Resources */,
@@ -456,6 +477,7 @@
 				9E221CA7268792980075F8D1 /* NewsFeedModel.swift in Sources */,
 				9E221CA1268786710075F8D1 /* NetworkManager.swift in Sources */,
 				9E3F96252689089600B02E20 /* ProfileVC.swift in Sources */,
+				9EC155B2268A03C5007E430D /* FriendsModel.swift in Sources */,
 				9E6167D226875818001FBD77 /* Authenticator.swift in Sources */,
 				9E89CFC62689D0B20028AD30 /* MainInfoCell.swift in Sources */,
 				9E3F961F2688A86200B02E20 /* PhotoView.swift in Sources */,
@@ -464,6 +486,7 @@
 				9EDBAC3A26876085004E78F4 /* AuthorizationManager.swift in Sources */,
 				9E221C9F26877D4F0075F8D1 /* FeedVK.swift in Sources */,
 				9E8B0D4E2687BFE700504C8F /* RealmManager.swift in Sources */,
+				9EC155B6268A0892007E430D /* FriendCollectionCell.swift in Sources */,
 				9E89CFCE2689D0CD0028AD30 /* FriendsCell.swift in Sources */,
 				9E221CA4268787160075F8D1 /* VkAPI.swift in Sources */,
 				9EDF49202687B9BC00DDEE90 /* FooterCell.swift in Sources */,
@@ -473,6 +496,7 @@
 				9E8B0D502687C11300504C8F /* RealmTokenSaver.swift in Sources */,
 				9EDF490D2687B4F400DDEE90 /* DataManager.swift in Sources */,
 				9E6167D026875818001FBD77 /* SceneDelegate.swift in Sources */,
+				9EC155B9268A0D07007E430D /* UICollectionView+Extensions.swift in Sources */,
 				9EDF491C2687B9AB00DDEE90 /* MediaCell.swift in Sources */,
 				9EDF49182687B99A00DDEE90 /* TextCell.swift in Sources */,
 				9E89CFD12689E0010028AD30 /* UserPhotos.swift in Sources */,

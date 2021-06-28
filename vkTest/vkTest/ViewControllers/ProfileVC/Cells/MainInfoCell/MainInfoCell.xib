@@ -32,7 +32,7 @@
                         </userDefinedRuntimeAttributes>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Zdg-De-56U">
-                        <rect key="frame" x="120" y="25.5" width="147" height="69"/>
+                        <rect key="frame" x="120" y="25.5" width="206" height="69"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя Фамилия" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sr5-18-5P5">
                                 <rect key="frame" x="0.0" y="0.0" width="126" height="21.5"/>
@@ -59,6 +59,7 @@
                     <constraint firstItem="Zdg-De-56U" firstAttribute="centerY" secondItem="Dzz-Qk-aYj" secondAttribute="centerY" id="Agv-Mn-AMM"/>
                     <constraint firstItem="Zdg-De-56U" firstAttribute="leading" secondItem="Dzz-Qk-aYj" secondAttribute="trailing" constant="10" id="CvE-rh-taR"/>
                     <constraint firstItem="Dzz-Qk-aYj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Rtj-aW-LGo"/>
+                    <constraint firstAttribute="trailing" secondItem="Zdg-De-56U" secondAttribute="trailing" constant="10" id="k6f-Ai-HuP"/>
                     <constraint firstItem="Dzz-Qk-aYj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="pm7-y3-ZSg"/>
                     <constraint firstAttribute="bottom" secondItem="Dzz-Qk-aYj" secondAttribute="bottom" constant="10" id="s9l-ow-ecK"/>
                 </constraints>

@@ -12,7 +12,8 @@ import Alamofire
 enum NetworkService {
     case getNewsFeed
     case getProfilePhoto
-    case getUserInfo
+    case getUserInfo(id: Int?)
+    case getUserFriends(id: Int?)
 }
 
 extension NetworkService: TargetType {
@@ -28,6 +29,8 @@ extension NetworkService: TargetType {
             return "users.get"
         case .getProfilePhoto:
             return "photos.get"
+        case .getUserFriends:
+            return "friends.get"
         }
     }
     
@@ -52,8 +55,13 @@ extension NetworkService: TargetType {
             params["filters"] = "post"
         case .getProfilePhoto:
             params["album_id"] = "profile"
-        case .getUserInfo:
-            params["fields"] = "photo_max_orig, online, domain, site, education, status, last_seen, followers_count, occupation, relation, sex, bdate, city, country, home_town, screen_name"
+        case .getUserInfo(id: let id):
+            params["user_id"] = id
+            params["fields"] = "photo_max_orig, online, domain, site, education, status, last_seen, followers_count, occupation, relation, sex, bdate, city, country, home_town, screen_name, photo_max"
+        case .getUserFriends(id: let id):
+            params["user_id"] = id
+            params["fields"] = "photo_max"
+            params["order"] = "hints"
 //        default:
 //            return params
         }

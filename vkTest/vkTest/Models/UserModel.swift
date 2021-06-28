@@ -38,7 +38,8 @@ class UserModel: Mappable {
     var sex = 0
     var occupation: Occupation?
     var online = 0
-    var photoMaxOrig = ""
+    var photoMax = ""
+    var photo200Orig = ""
     var followersCount = 0
     
     required init?(map: Map) {
@@ -60,7 +61,8 @@ class UserModel: Mappable {
         sex             <- map["sex"]
         occupation      <- map["occupation"]
         online          <- map["online"]
-        photoMaxOrig    <- map["photo_max_orig"]
+        photoMax    <- map["photo_max"]
+        photo200Orig    <- map["photo_200_orig"]
         followersCount  <- map["followers_count"]
     }
 }

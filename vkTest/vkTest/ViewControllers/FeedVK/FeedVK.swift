@@ -34,9 +34,6 @@ class FeedVK: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.registerCell([HeaderCell.self, TextCell.self, MediaCell.self, FooterCell.self])
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
         getNewsFeed()
     }
     
