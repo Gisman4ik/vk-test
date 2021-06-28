@@ -53,6 +53,9 @@ class MediaCell: UITableViewCell {
                 sPhotoView.trailingAnchor.constraint(equalTo: mainView.trailingAnchor)
             ]
             NSLayoutConstraint.activate(photoViewConstraints)
+        } else {
+            // Т.к. время было ограничено, то любой контент кроме фото (аудио,видео,ссылки) не обрабатываются и могут выглядеть как пустые посты.
+            mainViewHeight.constant = 0
         }
     }
 }
