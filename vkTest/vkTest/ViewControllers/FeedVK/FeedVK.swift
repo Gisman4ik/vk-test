@@ -26,6 +26,7 @@ enum FeedViewModel: CaseIterable {
 class FeedVK: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var loadingView: UIView!
     
     var newsFeedData: NewsFeedModel?
     var tableModel: [[FeedViewModel]] = []
@@ -41,6 +42,7 @@ class FeedVK: UIViewController {
         NetworkManager.shared.getNewsFeed { [weak self] result in
             self?.newsFeedData = result.response
             self?.tableModel = FeedViewModel.getModel(newsFeedData: self?.newsFeedData)
+            self?.loadingView.isHidden = true
             self?.tableView.reloadData()
         } failure: { error in
             print(error)

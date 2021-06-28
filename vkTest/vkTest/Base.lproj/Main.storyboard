@@ -16,21 +16,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zV6-H9-opS">
-                                <rect key="frame" x="144.5" y="427.5" width="125" height="41"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                <state key="normal" title="Войти в VK"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zV6-H9-opS">
+                                <rect key="frame" x="117.5" y="418" width="179" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.45011776689999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="k2V-zz-1tJ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="o0B-1d-h9j"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                <state key="normal" title="Войти в " image="vkLogo">
+                                    <color key="titleColor" red="0.36466276650000001" green="0.36473065609999999" blue="0.36465847489999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="signInVK:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PUQ-KE-Q6J"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flypikaLogo" translatesAutoresizingMaskIntoConstraints="NO" id="RG0-cY-aHm">
+                                <rect key="frame" x="0.0" y="84" width="414" height="108.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RG0-cY-aHm" secondAttribute="height" multiplier="3.82:1" id="u2b-7h-lyl"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created by Artur Radziukhin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogv-Dt-ndY">
+                                <rect key="frame" x="169" y="821" width="225" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" red="0.36466276650000001" green="0.36473065609999999" blue="0.36465847489999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RG0-cY-aHm" secondAttribute="trailing" id="3Ad-NZ-Xlp"/>
                             <constraint firstItem="zV6-H9-opS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Eja-eS-MaP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ogv-Dt-ndY" secondAttribute="trailing" constant="20" id="FBH-gd-aja"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ogv-Dt-ndY" secondAttribute="bottom" constant="20" id="Hxo-hF-uLs"/>
+                            <constraint firstItem="RG0-cY-aHm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="nsX-6q-hww"/>
                             <constraint firstItem="zV6-H9-opS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tAO-BQ-s4H"/>
+                            <constraint firstItem="RG0-cY-aHm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uyl-xZ-aWp"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -55,17 +84,39 @@
                                     <outlet property="delegate" destination="0QT-1q-PuZ" id="qXl-tY-1aI"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yQS-4I-Tvr">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="kV3-p3-fnN">
+                                        <rect key="frame" x="182" y="384" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="ctl-7q-x6R"/>
+                                            <constraint firstAttribute="width" constant="50" id="v5g-xL-O12"/>
+                                        </constraints>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="kV3-p3-fnN" firstAttribute="centerX" secondItem="yQS-4I-Tvr" secondAttribute="centerX" id="7pO-A5-trE"/>
+                                    <constraint firstItem="kV3-p3-fnN" firstAttribute="centerY" secondItem="yQS-4I-Tvr" secondAttribute="centerY" id="kny-ys-PuS"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dCt-5g-ZXY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="yQS-4I-Tvr" firstAttribute="top" secondItem="dCt-5g-ZXY" secondAttribute="top" id="14J-Bz-IqO"/>
+                            <constraint firstItem="dCt-5g-ZXY" firstAttribute="trailing" secondItem="yQS-4I-Tvr" secondAttribute="trailing" id="HkI-hF-b6U"/>
+                            <constraint firstItem="yQS-4I-Tvr" firstAttribute="leading" secondItem="dCt-5g-ZXY" secondAttribute="leading" id="ZZ2-ys-uaD"/>
                             <constraint firstItem="bcf-Tc-nD7" firstAttribute="top" secondItem="dCt-5g-ZXY" secondAttribute="top" id="ar1-hJ-1Oo"/>
                             <constraint firstItem="bcf-Tc-nD7" firstAttribute="leading" secondItem="dCt-5g-ZXY" secondAttribute="leading" id="hx3-fo-8CJ"/>
+                            <constraint firstItem="dCt-5g-ZXY" firstAttribute="bottom" secondItem="yQS-4I-Tvr" secondAttribute="bottom" id="nfQ-rO-ggS"/>
                             <constraint firstItem="dCt-5g-ZXY" firstAttribute="trailing" secondItem="bcf-Tc-nD7" secondAttribute="trailing" id="qMc-XB-j8O"/>
                             <constraint firstItem="dCt-5g-ZXY" firstAttribute="bottom" secondItem="bcf-Tc-nD7" secondAttribute="bottom" id="trz-9d-Lcn"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="loadingView" destination="yQS-4I-Tvr" id="aou-zk-SMm"/>
                         <outlet property="tableView" destination="bcf-Tc-nD7" id="m7F-JH-1vS"/>
                     </connections>
                 </viewController>
@@ -89,17 +140,39 @@
                                     <outlet property="delegate" destination="NIF-U3-6x0" id="RDX-tE-DV1"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NHk-v9-wJf">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="13v-Xk-i3L">
+                                        <rect key="frame" x="182" y="384" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="OGQ-xh-D4l"/>
+                                            <constraint firstAttribute="height" constant="50" id="qqH-db-g2p"/>
+                                        </constraints>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="13v-Xk-i3L" firstAttribute="centerY" secondItem="NHk-v9-wJf" secondAttribute="centerY" id="0cW-KK-I3b"/>
+                                    <constraint firstItem="13v-Xk-i3L" firstAttribute="centerX" secondItem="NHk-v9-wJf" secondAttribute="centerX" id="KzE-0W-z3w"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gYj-iS-i77"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="gYj-iS-i77" firstAttribute="bottom" secondItem="n0t-RW-NbN" secondAttribute="bottom" id="3lh-jZ-ekb"/>
+                            <constraint firstItem="gYj-iS-i77" firstAttribute="bottom" secondItem="NHk-v9-wJf" secondAttribute="bottom" id="7jA-Jh-A6Z"/>
+                            <constraint firstItem="gYj-iS-i77" firstAttribute="trailing" secondItem="NHk-v9-wJf" secondAttribute="trailing" id="Bfm-za-uUp"/>
                             <constraint firstItem="n0t-RW-NbN" firstAttribute="leading" secondItem="gYj-iS-i77" secondAttribute="leading" id="HuZ-yc-Dx1"/>
+                            <constraint firstItem="NHk-v9-wJf" firstAttribute="top" secondItem="gYj-iS-i77" secondAttribute="top" id="MGv-6a-zbl"/>
+                            <constraint firstItem="NHk-v9-wJf" firstAttribute="leading" secondItem="gYj-iS-i77" secondAttribute="leading" id="TK4-Fv-ty7"/>
                             <constraint firstItem="n0t-RW-NbN" firstAttribute="top" secondItem="gYj-iS-i77" secondAttribute="top" id="amw-uO-HTs"/>
                             <constraint firstItem="gYj-iS-i77" firstAttribute="trailing" secondItem="n0t-RW-NbN" secondAttribute="trailing" id="gs3-ki-QWd"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="loadingView" destination="NHk-v9-wJf" id="hRA-TQ-mIH"/>
                         <outlet property="tableView" destination="n0t-RW-NbN" id="FQc-Q3-kQ8"/>
                     </connections>
                 </viewController>
@@ -109,14 +182,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="flypikaLogo" width="3507" height="918"/>
+        <image name="vkLogo" width="60" height="60"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

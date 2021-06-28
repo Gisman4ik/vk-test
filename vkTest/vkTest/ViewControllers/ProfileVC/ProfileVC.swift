@@ -18,25 +18,25 @@ enum ProfileViewModel: CaseIterable {
 class ProfileVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var loadingView: UIView!
     
     var profile: UserModel?
     var userFriends: FriendsModel?
     var tableModel = ProfileViewModel.allCases
     var profileID: Int?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.registerCell([MainInfoCell.self, AdditionalInfoCell.self,FriendsCell.self])
         getProfileInfo()
     }
-    override func viewWillAppear(_ animated: Bool) {
-        tableView.reloadData()
-    }
     
     func getProfileInfo() {
         NetworkManager.shared.getUserInfo(id: profileID) { [weak self] result in
             self?.profile = result.response?.first
             self?.title = self?.profile?.screenName
+            self?.loadingView.isHidden = true
             self?.tableView.reloadData()
         } failure: { error in
             print(error)
