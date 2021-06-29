@@ -70,7 +70,7 @@
                 <outlet property="profileStatus" destination="BoX-CC-Kuf" id="qs2-ki-Y9i"/>
                 <outlet property="slideshow" destination="RjV-jx-UzB" id="HiZ-Y7-gjk"/>
             </connections>
-            <point key="canvasLocation" x="4.3478260869565224" y="74.665178571428569"/>
+            <point key="canvasLocation" x="-509" y="-94"/>
         </tableViewCell>
     </objects>
     <resources>
